@@ -26,11 +26,6 @@ for (let i = 0; i < 8; i++) {
 }
 
 
-
-
-
-// let num;
-
 do {
     num = prompt("Введите число больше 100", 0);
 } while (num <= 100 && num != null);
