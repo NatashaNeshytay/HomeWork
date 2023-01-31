@@ -1,31 +1,9 @@
-for (let i = "#"; i.length <= 7; i+="#") {   
-    console.log(i);
-}
+const email = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@+[a-zA-Z0]+\.[a-zA-Z0]+/;
+const isEmail = (str) => email.test(str);
 
-let str = "";
-while (str.length<7) {
-    console.log (str+="#");
-}
+console.log(isEmail('mail@mail.312412'))
+console.log(isEmail('mail213_123@mail.com'))
+console.log(isEmail('_@mail.ru'))
+console.log(isEmail('324mail@mail.ru'))
+console.log(isEmail('t@test.ru'))
 
-let slash = "#";
-let space = " ";
-let result = "";
-let row = true;
-for (let i = 0; i < 8; i++) {
-    for (let j = 0; j < 8; j++) {
-        if ((j + row) % 2 == 0) {
-            result += space;
-        } else {
-            result += slash;
-        }
-    }
-   
-    console.log(result);
-    result = "";
-    row = ! row;
-}
-
-
-do {
-    num = prompt("Введите число больше 100", 0);
-} while (num <= 100 && num != null);
